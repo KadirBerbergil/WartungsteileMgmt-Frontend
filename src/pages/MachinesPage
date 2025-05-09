@@ -1,0 +1,27 @@
+import React from 'react';
+import { Typography, Box, Button } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import MachinesList from '../components/MachinesList';
+
+const MachinesPage: React.FC = () => {
+  return (
+    <Box>
+      <Box display="flex" justifyContent="space-between" alignItems="center" mb={3}>
+        <Typography variant="h4">
+          Maschinen-Verwaltung
+        </Typography>
+        <Button 
+          variant="contained" 
+          startIcon={<AddIcon />}
+          sx={{ bgcolor: '#0066CC' }}
+        >
+          Neue Maschine
+        </Button>
+      </Box>
+      
+      <MachinesList />
+    </Box>
+  );
+};
+
+export default MachinesPage;
